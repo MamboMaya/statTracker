@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/master.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      {{#user}}
+      <a href="/">Home</a>
+      <form class="" action="/logout" method="post">
+        <input type="submit" name="" value="Logout">
+      </form>
+      {{/user}}
+      {{^user}}
+      <span><a href="/login">Login</a></span>
+      {{/user}}
+    </header>
+
+    {{{yield}}}
+
+
+    
+  </body>
+</html>
