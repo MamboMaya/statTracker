@@ -1,0 +1,16 @@
+{{#activities}}
+<h1>{{name}}</h1>
+<h3>Stat history:</h3>
+{{#stats}}
+<div class="stats">
+  <span><strong>When:</strong> {{date}}</span>
+  <span><strong>How Many:</strong> {{count}}</span>
+</div>
+{{/stats}}
+<a href="#"></a>
+<h3>Add your stats!</h3>
+<form class="" action="/api/activities/{{_id}}/stats" method="post">
+  <input type="text" name="count" value="">
+  <input type="submit" name="" value="Add stat!">
+</form>
+{{/activities}}

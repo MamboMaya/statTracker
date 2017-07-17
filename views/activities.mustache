@@ -1,0 +1,16 @@
+<h1>My Activities:</h1>
+
+{{#activities}}
+<div class="">
+  <li>
+    <a href="/api/activities/{{_id}}">{{name}}</a>
+  </li>
+</div>
+{{/activities}}
+
+
+<h3>Add New Activity</h3>
+<form class="" action="/api/activities" method="post">
+<input type="text" name="name" value=""><br>
+<input type="submit" name="" value="Add it!">
+</form>

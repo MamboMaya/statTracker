@@ -19,4 +19,8 @@ router.post('/register', function(req, res){
   })
 })
 
+router.post('/login', function(req, res){
+  res.redirect('api/activities')
+})
+
 module.exports = router

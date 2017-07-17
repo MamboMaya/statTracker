@@ -8,6 +8,7 @@ const BasicStrategy = require('passport-http').BasicStrategy
 const User = require('./models/User')
 const registrationRoute = require('./routes/registration')
 const homepageRoute = require('./routes/homepage')
+const activitiesRoute = require('./routes/activities')
 
 mongoose.Promise = require('bluebird')
 mongoose.connect('mongodb://localhost:27017/stattracker')
@@ -35,7 +36,7 @@ passport.use(new BasicStrategy(
 app.use(homepageRoute)
 app.use(registrationRoute)
 app.use(passport.authenticate('basic', {session: false}))
-
+app.use(activitiesRoute)
 
 app.listen(3000, function(){
   console.log('GOOD TO GO!!!!')
